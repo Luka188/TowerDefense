@@ -12,7 +12,7 @@ public class Grid : MonoBehaviour {
     Vector3 tL;
 
     [Header("Towers")]
-    public GameObject fireTower;
+    public GameObject towerToSpawn;
     void Awake()
     {
         float t1 = Time.time;
@@ -50,6 +50,8 @@ public class Grid : MonoBehaviour {
         int y = Mathf.RoundToInt((gridSizeY-1) * percentY);
         return grid[x, y];
     }
+
+
     public void TryCreateTurret(Vector3 v, int diameterX, int diameterY)
     {
     
@@ -89,6 +91,7 @@ public class Grid : MonoBehaviour {
                     grid[n.gridX + j, n.gridY - i].walkable = false;
                 }
             }
+            Instantiate(towerToSpawn,v,Quaternion.identity);
         }
         /*
         Node k = NodeFromWorldPoint(new Vector3(v.x - diameter/2, v.y, v.z -diameter/2));

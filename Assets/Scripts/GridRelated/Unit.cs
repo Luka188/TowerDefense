@@ -71,6 +71,7 @@ public class Unit : MonoBehaviour {
     }
     IEnumerator FollowPath()
     {
+        print("pathlen:" + path.Length);
         Vector3 currentPoint = path[0];
         while (true)
         {

@@ -38,6 +38,11 @@ public class TurretPlacement : MonoBehaviour {
                     grille.TryCreateTurret(v3, dimX,dimY);
 
                 }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    
+                }
+
             }
         }
         
