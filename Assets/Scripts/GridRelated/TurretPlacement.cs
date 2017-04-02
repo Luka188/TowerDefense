@@ -47,6 +47,7 @@ public class TurretPlacement : MonoBehaviour {
         }
         
     }
+ 
     float NearFive(float k)
     {
         int neg = 1;

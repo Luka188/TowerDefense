@@ -76,7 +76,7 @@ public class PathFinding : MonoBehaviour {
         List<Node> path = new List<Node>();
         Node currentNode = End;
         while(currentNode != Start){
-
+            
             path.Add(currentNode);
             currentNode = currentNode.Parent;
         }
